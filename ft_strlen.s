@@ -1,19 +1,19 @@
-PUBLIC _ft_strlen
+global _ft_strlen
 
 _ft_strlen:
-	push ebp
-	mov ebp, esp
-	sub esp, 4
-	push edi 		;;save value
-	mov edi, [ebp+8] 
-	mov eax, 0
+	push rbp
+	mov rbp, rsp
+	sub rsp, 4
+	push rdi 		;save value
+	mov rdi, [rbp+16] 
+	mov rax, 0
 loop:
-	add eax, 1	
-	cmp BYTE [edi], 0
-	add edi, 1
+	add rax, 1	
+	cmp BYTE [rdi], 0
+	add rdi, 1
 	jne loop
 
-	pop edi			;;recover value
-	mov esp, ebp
-	pop ebp
+	pop rdi			;recover value
+	mov rsp, rbp
+	pop rbp
 	ret

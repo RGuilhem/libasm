@@ -11,14 +11,13 @@ NAME = libasm.a
 all: $(NAME)
 
 %.o: %.s
-	nasm $< -o $@
+	nasm -f elf64 $< -o $@
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -rf $(OBJS)
-	rm main.o
 
 fclean: clean
 	rm -rf $(NAME)
