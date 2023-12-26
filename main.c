@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-size_t ft_strlen(const char *s);
+size_t ft_strlen(char *s);
 
 int main(void) {
 	char *tab = "Hello";

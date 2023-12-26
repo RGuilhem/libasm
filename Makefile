@@ -25,6 +25,6 @@ fclean: clean
 re: fclean all
 
 test:
-	gcc main.c $(FLAGS) -L. -lasm -o test_main
+	gcc main.c $(FLAGS) $(NAME) -o test_main
 
 .PHONY: all re clean fclean
