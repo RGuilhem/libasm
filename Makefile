@@ -1,4 +1,4 @@
-FLAGS = -Wall -Werror -Wextra -g -fsanitize=address
+FLAGS = -Wall -Werror -Wextra -g
 SRCS = ft_strlen.s	\
       ft_strcpy.s	\
       ft_read.s		\
